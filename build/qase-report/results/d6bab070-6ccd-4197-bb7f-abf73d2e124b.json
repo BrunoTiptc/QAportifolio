@@ -1,0 +1,93 @@
+{
+    "id": "d6bab070-6ccd-4197-bb7f-abf73d2e124b",
+    "title": "Deve carregar a página principal com o título correto",
+    "signature": "1::chromium::example.spec.ts::testes_de_validação_do_portfólio_-_modo_demonstração_linkedin::deve_carregar_a_página_principal_com_o_título_correto_(qase_id:_1)",
+    "execution": {
+        "status": "failed",
+        "start_time": 1780235279.226,
+        "end_time": 1780235286.479,
+        "duration": 7253,
+        "stacktrace": "    Error: expect(locator).toBeVisible() failed\n    \n    Locator: locator('header')\n    Expected: visible\n    Timeout: 5000ms\n    Error: element(s) not found\n    \n    Call log:\n      - Expect \"toBeVisible\" with timeout 5000ms\n      - waiting for locator('header')\n    \n        at C:\\Users\\Bruno PC\\Desktop\\QA\\Portifolio QA\\tests\\example.spec.ts:17:26\n--- End of stack trace ---\n",
+        "thread": "12308-0"
+    },
+    "fields": {},
+    "attachments": [
+        {
+            "id": "691c35ac-8d0b-4003-81da-7ecff9dfa879",
+            "file_name": "video.webm",
+            "mime_type": "video/webm",
+            "file_path": "build\\qase-report\\attachments\\691c35ac-8d0b-4003-81da-7ecff9dfa879-video.webm"
+        },
+        {
+            "id": "ce5be1ee-bfbd-48e0-81c9-aad0abc52274",
+            "file_name": "error-context.md",
+            "mime_type": "text/markdown",
+            "file_path": "build\\qase-report\\attachments\\ce5be1ee-bfbd-48e0-81c9-aad0abc52274-error-context.md"
+        }
+    ],
+    "steps": [
+        {
+            "id": "70cc69e4-0898-40f9-8cba-89cc5adfe192",
+            "step_type": "text",
+            "data": {
+                "action": "Before Hooks",
+                "expected_result": null,
+                "input_data": null
+            },
+            "parent_id": null,
+            "execution": {
+                "status": "passed",
+                "start_time": 1780235279.258,
+                "duration": 2267,
+                "end_time": 1780235281.525,
+                "attachments": []
+            },
+            "steps": [
+                {
+                    "id": "42d37333-8599-45ec-b4a8-a71d63cadb56",
+                    "step_type": "text",
+                    "data": {
+                        "action": "beforeEach hook",
+                        "expected_result": null,
+                        "input_data": null
+                    },
+                    "parent_id": "70cc69e4-0898-40f9-8cba-89cc5adfe192",
+                    "execution": {
+                        "status": "passed",
+                        "start_time": 1780235279.259,
+                        "duration": 2265,
+                        "end_time": 1780235281.524,
+                        "attachments": []
+                    },
+                    "steps": []
+                }
+            ]
+        }
+    ],
+    "params": {},
+    "param_groups": [],
+    "testops_ids": [
+        1
+    ],
+    "relations": {
+        "suite": {
+            "data": [
+                {
+                    "title": "chromium",
+                    "public_id": null
+                },
+                {
+                    "title": "example.spec.ts",
+                    "public_id": null
+                },
+                {
+                    "title": "Testes de Validação do Portfólio - Modo Demonstração LinkedIn",
+                    "public_id": null
+                }
+            ]
+        }
+    },
+    "muted": false,
+    "message": "CompoundError: One or more errors occurred. ---\nError: expect(locator).toBeVisible() failed\n\nLocator: locator('header')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n  - Expect \"toBeVisible\" with timeout 5000ms\n  - waiting for locator('header')\n\n--- End of error message ---\n",
+    "tags": []
+}

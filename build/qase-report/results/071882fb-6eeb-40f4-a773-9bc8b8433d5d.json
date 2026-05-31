@@ -1,0 +1,87 @@
+{
+    "id": "071882fb-6eeb-40f4-a773-9bc8b8433d5d",
+    "title": "Deve garantir que todos os cards de projetos possuem links válidos",
+    "signature": "3::chromium::example.spec.ts::testes_de_validação_do_portfólio_-_modo_demonstração_linkedin::deve_garantir_que_todos_os_cards_de_projetos_possuem_links_válidos_(qase_id:_3)",
+    "execution": {
+        "status": "passed",
+        "start_time": 1780235291.319,
+        "end_time": 1780235295.359,
+        "duration": 4040,
+        "stacktrace": null,
+        "thread": "12308-0"
+    },
+    "fields": {},
+    "attachments": [
+        {
+            "id": "479c4594-5984-4042-ab07-52ea1feaee67",
+            "file_name": "video.webm",
+            "mime_type": "video/webm",
+            "file_path": "build\\qase-report\\attachments\\479c4594-5984-4042-ab07-52ea1feaee67-video.webm"
+        }
+    ],
+    "steps": [
+        {
+            "id": "7773ab33-cb0f-4be0-8659-747bb5f29db7",
+            "step_type": "text",
+            "data": {
+                "action": "Before Hooks",
+                "expected_result": null,
+                "input_data": null
+            },
+            "parent_id": null,
+            "execution": {
+                "status": "passed",
+                "start_time": 1780235291.356,
+                "duration": 1357,
+                "end_time": 1780235292.713,
+                "attachments": []
+            },
+            "steps": [
+                {
+                    "id": "c5d3ce65-4567-40c2-8cf8-bfc6f0f4857c",
+                    "step_type": "text",
+                    "data": {
+                        "action": "beforeEach hook",
+                        "expected_result": null,
+                        "input_data": null
+                    },
+                    "parent_id": "7773ab33-cb0f-4be0-8659-747bb5f29db7",
+                    "execution": {
+                        "status": "passed",
+                        "start_time": 1780235291.358,
+                        "duration": 1354,
+                        "end_time": 1780235292.712,
+                        "attachments": []
+                    },
+                    "steps": []
+                }
+            ]
+        }
+    ],
+    "params": {},
+    "param_groups": [],
+    "testops_ids": [
+        3
+    ],
+    "relations": {
+        "suite": {
+            "data": [
+                {
+                    "title": "chromium",
+                    "public_id": null
+                },
+                {
+                    "title": "example.spec.ts",
+                    "public_id": null
+                },
+                {
+                    "title": "Testes de Validação do Portfólio - Modo Demonstração LinkedIn",
+                    "public_id": null
+                }
+            ]
+        }
+    },
+    "muted": false,
+    "message": null,
+    "tags": []
+}

@@ -1,57 +1,46 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
-import path from 'path';
 
+// Carrega as variáveis de ambiente do arquivo .env com segurança
+dotenv.config();
 
-/**
- * See https://playwright.dev/docs/test-configuration.
- */
 export default defineConfig({
   testDir: './tests',
-  /* Run tests in files in parallel */
+  /* Executa os testes em arquivos em paralelo */
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
+  /* Falha o build no CI se esquecer um test.only */
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
+  /* Quantidade de retentativas */
   retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
+  /* Quantidade de workers */
   workers: process.env.CI ? 1 : undefined,
-  
-  /* CONFIGURAÇÃO DO REPORTER ATUALIZADA PARA O QASE */
+
+  /* CONFIGURAÇÃO DO REPORTER ENXUTA (A biblioteca lê direto do .env) */
   reporter: [
-    ['html'], // Mantém o seu relatório HTML padrão do Playwright
-    ['playwright-qase-reporter', {
-      apiToken: 'afe57d0cdfeb9c19bf7ef381358602f1e9fd2ca4cb620fcdce2657183a94124d', // Seu token adicionado com sucesso
-      projectCode: 'QP', // Substitua pelas letras maiúsculas que aparecem na URL do seu projeto no Qase (Ex: PORT, PRF, etc)
-      runComplete: true,
-      logging: true,
-    }],
+    ['html'], // Relatório local padrão do Playwright
+    ['playwright-qase-reporter'] // O reporter do Qase configurado de forma limpa
   ],
-  
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
+  /* Configurações globais para os testes */
   use: {
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-     /* FORÇA A GRAVAÇÃO DE VÍDEO EM TODOS OS TESTES */
-    video: 'on', 
-    headless: false,
+    video: 'on', // Força a gravação dos vídeos para o LinkedIn
+    headless: false, // Abre o navegador na tela para você ver acontecer
     launchOptions: {
-    args: ['--start-maximized']
+      args: ['--start-maximized'] // Abre o Chrome em tela cheia
     }
   },
 
-  /* Configure projects for major browsers */
+  /* Configuração dos navegadores */
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },

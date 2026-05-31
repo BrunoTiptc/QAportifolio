@@ -1,0 +1,58 @@
+{
+    "title": "Test run",
+    "execution": {
+        "start_time": 1780235277.091,
+        "end_time": 1780235318.977,
+        "duration": 41886,
+        "cumulative_duration": 50140
+    },
+    "stats": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1,
+        "skipped": 0,
+        "blocked": 0,
+        "invalid": 0,
+        "muted": 0
+    },
+    "results": [
+        {
+            "duration": 7253,
+            "id": "d6bab070-6ccd-4197-bb7f-abf73d2e124b",
+            "status": "failed",
+            "thread": "12308-0",
+            "title": "Deve carregar a página principal com o título correto"
+        },
+        {
+            "duration": 4040,
+            "id": "071882fb-6eeb-40f4-a773-9bc8b8433d5d",
+            "status": "passed",
+            "thread": "12308-0",
+            "title": "Deve garantir que todos os cards de projetos possuem links válidos"
+        },
+        {
+            "duration": 38847,
+            "id": "bdbb472a-f311-437e-891f-00218f985aae",
+            "status": "passed",
+            "thread": "12308-1",
+            "title": "Deve verificar se os links das redes sociais estão corretos"
+        }
+    ],
+    "threads": [],
+    "suites": [],
+    "environment": "local",
+    "host_data": {
+        "system": "windows",
+        "machineName": "BrunoPC",
+        "release": "10.0.19045",
+        "version": "Microsoft Windows [vers�o 10.0.19045.6466]",
+        "arch": "x64",
+        "language": "v22.13.1",
+        "packageManager": "10.9.2",
+        "framework": "1.60.0",
+        "reporter": "2.5.1",
+        "commons": "2.7.1",
+        "apiClientV1": "1.1.7",
+        "apiClientV2": "1.0.7"
+    }
+}

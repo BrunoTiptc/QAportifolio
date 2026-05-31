@@ -1,0 +1,24 @@
+📑 Guia de Comandos Práticos - Playwright + Qase.io
+1. Instalação das Dependências (Apenas uma vez por projeto)
+Comando corrigido para instalar o conector do Qase e o leitor de variáveis de ambiente (.env):
+
+Bash
+npm install playwright-qase-reporter dotenv
+
+2. Execução Focada (Modo Demonstração / LinkedIn)
+Para rodar os testes vendo o navegador abrir, usando apenas o Google Chrome/Chromium (evitando aquele "loop" demorado entre vários navegadores) e gerando o vídeo perfeito:
+
+Bash
+npx playwright test --project=chromium --headed
+
+3. Execução em Segundo Plano (Modo Esteira / CI-CD)
+Para rodar todos os testes de forma ultra rápida "por baixo dos panos", sem abrir nenhuma janela na tela, ideal para quando você só quer atualizar o dashboard do Qase rapidamente:
+
+Bash
+npx playwright test
+
+Bash
+npx playwright test --project=chromium --headed 
+
+comando especifico para rodar em um navegador so trocar o =chromium 
+pelo navegador de preferencia

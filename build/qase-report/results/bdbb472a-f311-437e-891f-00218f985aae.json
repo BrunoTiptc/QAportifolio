@@ -1,0 +1,87 @@
+{
+    "id": "bdbb472a-f311-437e-891f-00218f985aae",
+    "title": "Deve verificar se os links das redes sociais estão corretos",
+    "signature": "2::chromium::example.spec.ts::testes_de_validação_do_portfólio_-_modo_demonstração_linkedin::deve_verificar_se_os_links_das_redes_sociais_estão_corretos_(qase_id:_2)",
+    "execution": {
+        "status": "passed",
+        "start_time": 1780235279.234,
+        "end_time": 1780235318.081,
+        "duration": 38847,
+        "stacktrace": null,
+        "thread": "12308-1"
+    },
+    "fields": {},
+    "attachments": [
+        {
+            "id": "820c98ee-d0af-4303-ab75-38b34a2ee0e4",
+            "file_name": "video.webm",
+            "mime_type": "video/webm",
+            "file_path": "build\\qase-report\\attachments\\820c98ee-d0af-4303-ab75-38b34a2ee0e4-video.webm"
+        }
+    ],
+    "steps": [
+        {
+            "id": "edd14b84-3996-4892-adbc-e37d2b5f6f23",
+            "step_type": "text",
+            "data": {
+                "action": "Before Hooks",
+                "expected_result": null,
+                "input_data": null
+            },
+            "parent_id": null,
+            "execution": {
+                "status": "passed",
+                "start_time": 1780235279.266,
+                "duration": 2330,
+                "end_time": 1780235281.596,
+                "attachments": []
+            },
+            "steps": [
+                {
+                    "id": "0c5aa725-67c7-4af5-ada5-3157a01076db",
+                    "step_type": "text",
+                    "data": {
+                        "action": "beforeEach hook",
+                        "expected_result": null,
+                        "input_data": null
+                    },
+                    "parent_id": "edd14b84-3996-4892-adbc-e37d2b5f6f23",
+                    "execution": {
+                        "status": "passed",
+                        "start_time": 1780235279.268,
+                        "duration": 2327,
+                        "end_time": 1780235281.595,
+                        "attachments": []
+                    },
+                    "steps": []
+                }
+            ]
+        }
+    ],
+    "params": {},
+    "param_groups": [],
+    "testops_ids": [
+        2
+    ],
+    "relations": {
+        "suite": {
+            "data": [
+                {
+                    "title": "chromium",
+                    "public_id": null
+                },
+                {
+                    "title": "example.spec.ts",
+                    "public_id": null
+                },
+                {
+                    "title": "Testes de Validação do Portfólio - Modo Demonstração LinkedIn",
+                    "public_id": null
+                }
+            ]
+        }
+    },
+    "muted": false,
+    "message": null,
+    "tags": []
+}

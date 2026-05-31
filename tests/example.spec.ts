@@ -12,7 +12,7 @@ test.describe('Testes de Validação do Portfólio - Modo Demonstração LinkedI
   });
 
   test(qase(1, 'Deve carregar a página principal com o título correto'), async ({ page }) => {
-    await expect(page).toHaveTitle(/Bruno/i); 
+    await expect(page).toHaveTitle('Bem-vindo | Bruno César'); 
     const header = page.locator('header');
     await expect(header).toBeVisible();
     await page.waitForTimeout(2000); // Pausa para o vídeo
