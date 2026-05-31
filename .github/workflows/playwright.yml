@@ -10,10 +10,13 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
     
-    - uses: actions/setup-node@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
       with:
         node-version: lts/*
         
@@ -23,7 +26,7 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
       
-    - name: Run Playwright tests
+    - name: Run Playwright tests with Qase reporter
       env:
         QASE_MODE: testops
         QASE_ENVIRONMENT: github-actions
@@ -32,7 +35,8 @@ jobs:
         QASE_TESTOPS_RUN_AUTO_CREATE: true
       run: npx playwright test
       
-    - uses: actions/upload-artifact@v4
+    - name: Upload Playwright HTML report
+      uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
         name: playwright-report
