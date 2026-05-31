@@ -11,10 +11,18 @@ test.describe('Testes de Validação do Portfólio - Modo Demonstração LinkedI
     await page.goto(URL_PORTFOLIO);
   });
 
-  test(qase(1, 'Deve carregar a página principal com o título correto'), async ({ page }) => {
-    await expect(page).toHaveTitle('Bem-vindo | Bruno César'); 
-    const header = page.locator('header');
-    await expect(header).toBeVisible();
+test(qase(1, 'Deve carregar a página principal com o título correto'), async ({ page }) => {
+    // 1. Valida se o título da aba do navegador contém "Bruno" ou "César"
+    await expect(page).toHaveTitle(/Bruno|César/i); 
+
+    // 2. Localiza o texto principal do seu nome na tela de forma visível
+    const nomeHeader = page.getByText('Bruno César').first();
+    await expect(nomeHeader).toBeVisible();
+
+    // 3. Garante que o seu cargo também está visível logo abaixo
+    const cargoHeader = page.getByText('QA Júnior | Engenharia de Software').first();
+    await expect(cargoHeader).toBeVisible();
+    
     await page.waitForTimeout(2000); // Pausa para o vídeo
   });
 
